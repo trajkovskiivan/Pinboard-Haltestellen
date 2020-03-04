@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <img src="../images/Logo-PinboardHaltestellen.png" alt="">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-chart-pie"></i> Überblick - Heute </a></li>
+                <li><a href="../secondPage/index2.html"><i class="fas fa-archway"></i> Alle Haltestellen</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+            </ul>
+
+
+
+        </div>
+        <div class="main_content">
+            <div class="headder">
+                <div class="headder1 inline-block ">Überblick - Heute</div>
+                <div class="headder2 inline-block">Mario Obranic <img src="../images/MarioPic.png" alt=""></div>
+            </div>
+            <div class="main_info">
+                <div class="inline-block box">
+                    <p class="info_par1">Alle Haltestellen</p>
+                    <p class="info_par2">52</p>
+                </div>
+                <div class="inline-block box">
+                    <p class="info_par1">Gereinigte</p>
+                    <p class="info_par2">32</p>
+                </div>
+                <div class="inline-block box">
+                    <p class="info_par1">In Reinigung</p>
+                    <p class="info_par2">11</p>
+                </div>
+                <div class="inline-block box">
+                    <p class="info_par1">Für Reinigung</p>
+                    <p class="info_par2">9</p>
+                </div>
+            </div>
+
+            <div class="status_info">
+                <table class="status_table">
+                    <thead>
+                        <tr>
+                            <th id="firstTh">Haltestelle</th>
+                            <th>Status</th>
+                            <th>Adresse</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>München - Zentrum 1</td>
+                            <td><input type="text" value="GEREINIGT" class="bus_status" disabled></td>
+                            <td>Maximilian Strasse 15 10</td>
+                            <td><button class="infoBtn" id="modalBtn">INFO</button></td>
+                        </tr>
+                        <tr>
+                            <td>München - Zentrum 2</td>
+                            <td><input type="text" value="IN REINIGUNG" class="bus_status" disabled></td>
+                            <td>Maximilian Strasse 15 10</td>
+                            <td><button class="infoBtn">INFO</button></td>
+                        </tr>
+                        <tr>
+                            <td>München - Süd 1</td>
+                            <td><input type="text" value="GEREINIGT" class="bus_status" disabled></td>
+                            <td>Hansastrasse 19</td>
+                            <td><button class="infoBtn">INFO</button></td>
+                        </tr>
+                        <tr>
+                            <td>München - Süd 2</td>
+                            <td><input type="text" value="GEREINIGT" class="bus_status" disabled></td>
+                            <td>Nuernbergerstasse 127</td>
+                            <td><button class="infoBtn">INFO</button></td>
+                        </tr>
+                        <tr>
+                            <td>München - Süd 3</td>
+                            <td><input type="text" value="FÜR REINIGUNG" class="bus_status" disabled></td>
+                            <td>Franziska-Bilek-Weg 5</td>
+                            <td><button class="infoBtn">INFO</button></td>
+                        </tr>
+                        <tr>
+                            <td>München - West 1</td>
+                            <td><input type="text" value="FÜR REINIGUNG" class="bus_status" disabled></td>
+                            <td>Kainzenbadstrasse 23</td>
+                            <td><button class="infoBtn">INFO</button></td>
+                        </tr>
+                        <tr>
+                            <td>München - West 2</td>
+                            <td><input type="text" value="GEREINIGT" class="bus_status" disabled></td>
+                            <td>St.Paul-Strasse 1</td>
+                            <td><button class="infoBtn">INFO</button></td>
+                        </tr>
+                    </tbody>
+                    <tr>
+                        <td colspan="2">
+
+                        </td>
+                        <td class="" colspan="2">
+                            <span class="margLeft">Rows per page:</span>
+                            <span><select name="" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
+                            </span>
+                            <span class="margLeft">1-7 of 52</span>
+                            <i class="fas fa-chevron-left pointer"></i>
+                            <i class="fas fa-chevron-right pointer"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-top">
+                    <div>
+                        <h4 class="inline-block">MÜNCHEN - ZENTRUM 1 - INFO</h4>
+                        <span class="close">&times;</span>
+                    </div>
+                    <h4>ALLE REINIGUNGEN FÜR ZEITRAUM</h4>
+                </div>
+                <div class="modal-bottom">
+                    <table class="modal-table">
+                        <thead>
+                            <th class="modal-blue">Start</th>
+                            <th class="modal-blue">End</th>
+                            <th class="modal-blue">Photo Var</th>
+                            <th class="modal-blue">Photo Nach</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>11:07</td>
+                                <td>11:45</td>
+                                <td><input type="text" value="ANZEIGEN" class="bus_status"></td>
+                                <td><input type="text" value="ANZEIGEN" class="bus_status"></td>
+                            </tr>
+                            <tr>
+                                <td>216:21</td>
+                                <td>16:51</td>
+                                <td><input type="text" value="ANZEIGEN" class="bus_status"></td>
+                                <td><input type="text" value="ANZEIGEN" class="bus_status"></td>
+                            </tr>
+                            <tr>
+
+                                <td>20:14</td>
+                                <td>20:32</td>
+                                <td><input type="text" value="ANZEIGEN" class="bus_status"></td>
+                                <td><input type="text" value="ANZEIGEN" class="bus_status"></td>
+                            </tr>
+
+                        </tbody>
+                        <tr>
+                            <td colspan="4" class="modal-blue"></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+
+        <script src="../script/script.js"></script>
+
+</body>
+
+</html>
